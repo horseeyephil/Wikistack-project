@@ -4,9 +4,9 @@ const wiki = require('./wiki.js');
 const user = require('./user.js');
 
 
-router.get('/wiki/*', wiki);
+router.use('/wiki', wiki);
 //router.get('/wiki/add',wiki);
-router.get('/user', user);
+router.use('/user', user);
 
 router.get('/', function(req, res, next) {
     res.render('index');

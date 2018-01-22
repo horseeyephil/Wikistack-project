@@ -12,7 +12,7 @@ app.use(express.static('public'));
 const models = require('./models/');
 const routes = require('./routes/index');
 
-models.db.sync({force:true}).then(function(){
+models.db.sync({force:false}).then(function(){
     app.listen(3000);
 })
 .catch(console.error.bind(console));
